@@ -121,7 +121,7 @@ public class Burger {
 		System.out.println();
 		System.out.println("Und so gehts: ");
 		for (int i = 0; i < cntZutaten; i++) {
-			System.out.print(zutatenliste[i].zubereiten());
+			zutatenliste[i].zubereiten();
 		}
 	}
 
