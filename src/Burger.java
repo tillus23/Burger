@@ -72,9 +72,10 @@ public class Burger {
 	 * @return Preis des Burgers
 	 */
 	public float berechnePreis() {
-		int preis = 0;
+		float preis = 0;
 		for (int i = 0; i < cntZutaten; i++) {
-			preis += zutatenliste[i].preis;
+			Zutat z = zutatenliste[i];
+			preis += z.preis;
 		}
 		return preis;
 	}
