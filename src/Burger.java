@@ -51,7 +51,7 @@ public class Burger {
 	 */
 	public int berechneHoehe() {
 		int hoehe = 0;
-		for (int i = 0; i < zutatenliste.length; i++) {
+		for (int i = 0; i < cntZutaten; i++) {
 			hoehe += zutatenliste[i].berechneHoehe();
 		}
 		return hoehe;
@@ -110,7 +110,7 @@ public class Burger {
 		System.out.print("Rezept - " + toString());
 		System.out.println();
 		System.out.print("Zutaten: ");
-		for (int i = 0; i < zutatenliste.length; i++) {
+		for (int i = 0; i < cntZutaten; i++) {
 			System.out.print(zutatenliste[i].getName());
 
 			if (i < zutatenliste.length - 1) {
@@ -120,7 +120,7 @@ public class Burger {
 		System.out.println();
 		System.out.println();
 		System.out.println("Und so gehts: ");
-		for (int i = 0; i < zutatenliste.length; i++) {
+		for (int i = 0; i < cntZutaten; i++) {
 			System.out.print(zutatenliste[i].zubereiten());
 		}
 	}
