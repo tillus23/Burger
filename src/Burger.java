@@ -62,7 +62,7 @@ public class Burger {
 	 */
 	public int berechneZeit() {
 		int zeit = 0;
-		for (int i = 0; i < zutatenliste.length; i++) {
+		for (int i = 0; i < cntZutaten; i++) {
 			zeit += zutatenliste[i].zubereiten();
 		}
 		return zeit;
@@ -73,7 +73,7 @@ public class Burger {
 	 */
 	public float berechnePreis() {
 		int preis = 0;
-		for (int i = 0; i < zutatenliste.length; i++) {
+		for (int i = 0; i < cntZutaten; i++) {
 			preis += zutatenliste[i].preis;
 		}
 		return preis;
@@ -130,7 +130,7 @@ public class Burger {
 	 */
 	@Override
 	public String toString() {
-		return name + " (" + berechneHoehe() + "mm) - " + preis + "€";
+		return this.name + " (" + berechneHoehe() + "mm) - " + berechnePreis() + "€";
 
 	}
 
