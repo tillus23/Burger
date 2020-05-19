@@ -84,7 +84,7 @@ public class Burger {
 	 * @return Ist der Burger vegetarisch?
 	 */
 	public boolean istVegetarisch() {
-		for (int i = 0; i < zutatenliste.length; i++) {
+		for (int i = 0; i < cntZutaten; i++) {
 			if (!zutatenliste[i].isVegetarisch()) {
 				return false;
 			}
@@ -96,7 +96,7 @@ public class Burger {
 	 * @return Ist der Burger vegan?
 	 */
 	public boolean istVegan() {
-		for (int i = 0; i < zutatenliste.length; i++) {
+		for (int i = 0; i < cntZutaten; i++) {
 			if (!zutatenliste[i].isVegan()) {
 				return false;
 			}
